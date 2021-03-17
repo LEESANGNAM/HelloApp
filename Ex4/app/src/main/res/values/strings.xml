@@ -7,4 +7,8 @@
     <string name="btntext2_3">button visibility 3</string>
     <string name="btntext2_4">button visibility 4</string>
     <string name="btntext2_5">button visibility 5</string>
+    <string name="btntext4_1">button 1</string>
+    <string name="btntext4_2">button 2</string>
+    <string name="txt1">이건 텍스트뷰 입니다.</string>
+    <string name="edit1">이건 에디트텍스트 입니다.</string>
 </resources>

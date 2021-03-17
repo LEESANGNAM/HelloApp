@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Ex4</string>
+    <string name="text1">Padding ex test</string>
+    <string name="btntext1">로그인</string>
+    <string name="btntext2_1">button visibility 1</string>
+    <string name="btntext2_2">button visibility 2</string>
+    <string name="btntext2_3">button visibility 3</string>
+    <string name="btntext2_4">button visibility 4</string>
+    <string name="btntext2_5">button visibility 5</string>
 </resources>

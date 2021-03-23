@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ex4_16</string>
+    <string name="text_size">textSize속성</string>
+    <string name="text_color">textColor속성</string>
+    <string name="text_style">text_style속성</string>
+    <string name="text_typeface">text_typeface속</string>
+    <string name="text_singleline">text_singleline속성text_singleline속성text_singleline속성text_singleline속성text_singleline속성text_singleline속성text_singleline속성</string>
+    <string name="text1">안녕하세요 반가워요</string>
+    <string name="text2">textView  2222222</string>
+    <string name="text3">반가워요반가워요반가워요반가워요반가워요반가워요반가워요반가워요반가워요</string>
+</resources>

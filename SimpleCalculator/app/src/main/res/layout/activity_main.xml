@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edit1"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint1"
+        android:layout_marginTop="20dp"
+        />
+    <EditText
+        android:id="@+id/edit2"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint2"
+        android:layout_marginTop="20dp"
+        />
+
+    <Button
+        android:id="@+id/btn_plus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_plus" />
+    <Button
+        android:id="@+id/btn_minus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_minus"
+        />
+    <Button
+        android:id="@+id/btn_multi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_multi"
+        />
+    <Button
+        android:id="@+id/btn_div"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/btn_div"
+        />
+    <TextView
+        android:id="@+id/text_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="#FF0000"
+        android:layout_marginTop="20dp"
+        android:text="@string/text_result"/>
+
+
+
+
+</LinearLayout>

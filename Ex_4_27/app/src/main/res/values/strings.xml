@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Ex_4_27</string>
+    <string name="select_start">선택을 시작 하시겠습니까</string>
+    <string name="start">시작임</string>
+    <string name="like_pat">좋아하는 애완동물은?</string>
+    <string name="pet_dog">강아지</string>
+    <string name="pet_cat">고양이</string>
+    <string name="pet_panda">팬더</string>
+</resources>

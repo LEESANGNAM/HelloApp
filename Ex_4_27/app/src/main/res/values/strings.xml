@@ -7,4 +7,7 @@
     <string name="pet_cat">고양이</string>
     <string name="pet_panda">팬더</string>
     <string name="btn_done">선택완료</string>
+    <string name="title">애완동물사</string>
+    <string name="btn_finish">종료</string>
+    <string name="btn_first">처음으로</string>
 </resources>

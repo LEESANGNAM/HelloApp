@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ex5_10</string>
+    <string name="btn_top">위쪽</string>
+    <string name="btn_bottom">아래</string>
+    <string name="btn_left">왼쪽</string>
+    <string name="btn_rigth">오른쪽</string>
+    <string name="btn_center">중앙</string>
+    <string name="btn_base">기준</string>
+    <string name="btn1">1번</string>
+    <string name="btn2">2번</string>
+    <string name="btn3">3번</string>
+    <string name="btn4">4번</string>
+    <string name="btn5">5번</string>
+    <string name="btn6">6번</string>
+</resources>

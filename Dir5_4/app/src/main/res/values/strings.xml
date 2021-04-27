@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Dir5_4</string>
+    <string name="text_phone">전화번호</string>
+    <string name="edit_hint">000-0000-0000</string>
+    <string name="btn_input">입력</string>
+    <string name="btn_cencle">취소</string>
+</resources>

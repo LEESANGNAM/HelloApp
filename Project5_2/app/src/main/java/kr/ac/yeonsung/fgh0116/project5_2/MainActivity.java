@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText edit1,edit2;
@@ -32,6 +33,11 @@ public class MainActivity extends AppCompatActivity {
         btnMinus.setOnTouchListener(btnTouchListener);
         btnMul.setOnTouchListener(btnTouchListener);
         btnDiv.setOnTouchListener(btnTouchListener);
+
+        for(int i=0; i<btnNums.length;i++){
+            btnNums[i] = findViewById(btnNumIds[i]);
+            btnNums[i].setOnClickListener(btnClickListener);
+        }
     }
 
     View.OnTouchListener btnTouchListener = new View.OnTouchListener() {
@@ -56,6 +62,20 @@ public class MainActivity extends AppCompatActivity {
             textResult.append(result+"");
 
             return false;
+        }
+    };
+
+    View.OnClickListener btnClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Button btn = (Button) v;
+            if (edit1.isFocused()){
+                edit1.setText(edit1.getText().toString()+btn.getText().toString());
+            }else if(edit2.isFocused()){
+                edit2.setText(edit2.getText().toString()+btn.getText().toString());
+            }else {
+                Toast.makeText(getApplicationContext(),"EditText를 선택해주세요",Toast.LENGTH_LONG).show();
+            }
         }
     };
 }

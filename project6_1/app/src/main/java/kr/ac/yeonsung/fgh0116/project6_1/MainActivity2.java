@@ -1,8 +1,5 @@
 package kr.ac.yeonsung.fgh0116.project6_1;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -10,17 +7,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.Chronometer;
+import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.TimePicker;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import static android.view.View.INVISIBLE;
+
+public class MainActivity2 extends AppCompatActivity {
     RadioGroup rg;
     RadioButton radioCalendar, radioTime;
-    CalendarView calendar;
+    DatePicker calendar;
     TimePicker time;
-    Button btnStart, btnDone;
     Chronometer chrono1;
     TextView textResult;
     int year, month, date;
@@ -28,32 +30,28 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
 
         rg=findViewById(R.id.rg);
         radioCalendar = findViewById(R.id.radio_cal);
         radioTime = findViewById(R.id.radio_time);
         calendar = findViewById(R.id.calendar);
         time = findViewById(R.id.time);
-        btnStart = findViewById(R.id.btn_start);
-        btnDone = findViewById(R.id.btn_done);
         chrono1 = findViewById(R.id.chrono1);
         textResult = findViewById(R.id.text_result);
-
-        btnStart.setOnClickListener(btnListener);
-        btnDone.setOnClickListener(btnListener);
 
         radioCalendar.setOnClickListener(radioListener);
         radioTime.setOnClickListener(radioListener);
 
-        calendar.setOnDateChangeListener(calendarListener);
+        chrono1.setOnClickListener(chronoListener);
+        textResult.setOnLongClickListener(textListener);
     }
 
     View.OnClickListener radioListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            calendar.setVisibility(View.INVISIBLE);
-            time.setVisibility(View.INVISIBLE);
+            calendar.setVisibility(INVISIBLE);
+            time.setVisibility(INVISIBLE);
             switch (rg.getCheckedRadioButtonId()){
                 case  R.id.radio_cal:
                     calendar.setVisibility(View.VISIBLE);
@@ -65,31 +63,31 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    View.OnClickListener btnListener = new View.OnClickListener() {
+    View.OnClickListener chronoListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            switch (v.getId()){
-                case  R.id.btn_start:
-                    chrono1.setBase(SystemClock.elapsedRealtime());
-                    chrono1.start();
-                    chrono1.setTextColor(Color.RED);
-                    break;
-                case  R.id.btn_done:
-                    chrono1.stop();
-                    chrono1.setTextColor(Color.BLUE);
-                    textResult.setText(year+"년 "+month+"월 "+date+"일");
-                    textResult.append(time.getCurrentHour()+"시 "+ time.getCurrentMinute()+"분 예약 완료됨");
-                    break;
-            }
+            radioCalendar.setVisibility(View.VISIBLE);
+            radioTime.setVisibility(View.VISIBLE);
+            calendar.setVisibility(View.VISIBLE);
+            chrono1.setBase(SystemClock.elapsedRealtime());
+            chrono1.start();
+            chrono1.setTextColor(Color.RED);
         }
     };
 
-    CalendarView.OnDateChangeListener calendarListener = new CalendarView.OnDateChangeListener() {
+    View.OnLongClickListener textListener = new View.OnLongClickListener() {
         @Override
-        public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
-            MainActivity.this.year = year;
-            MainActivity.this.month = month+1;
-            MainActivity.this.date = dayOfMonth;
+        public boolean onLongClick(View v) {
+            chrono1.stop();
+            chrono1.setTextColor(Color.BLUE);
+            textResult.setText(calendar.getYear()+"년 "+(calendar.getMonth()+1)+"월 "+calendar.getDayOfMonth()+"일 ");
+            textResult.append(time.getCurrentHour()+"시 "+time.getCurrentMinute()+"분 예약 완료");
+            radioCalendar.setVisibility(INVISIBLE);
+            radioTime.setVisibility(INVISIBLE);
+            calendar.setVisibility(INVISIBLE);
+            time.setVisibility(INVISIBLE);
+            return false;
         }
     };
+
 }

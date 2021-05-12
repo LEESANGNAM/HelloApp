@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">project6_1</string>
+    <string name="app_name">날짜 시간 예약</string>
     <string name="btn_start">예약 시작</string>
     <string name="btn_done">예약 완료</string>
     <string name="radio_cal">날짜 설정(캘린더뷰)</string>
     <string name="radio_time">시간 설정(캘린더뷰)</string>
+    <string name="text1"> 0000년 00월 00일 00시 00분 예약완료</string>
 </resources>

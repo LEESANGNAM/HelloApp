@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">viewcontainertest</string>
+    <string name="btn1">버튼1</string>
+    <string name="btn2">버튼2</string>
+    <string name="btn3">버튼3</string>
+    <string name="btn4">버튼4</string>
+    <string name="btn5">버튼5</string>
+    <string name="btn6">버튼6</string>
+    <string name="btn7">버튼7</string>
+    <string name="btn8">버튼8</string>
+    <string name="drawer_out">여기는서랍밖입니다.</string>
+    <string name="drawer_in">여기는서랍안입니다.</string>
+    <string name="btn_handle">서랍손잡이</string>
+    <string name="btn_prev">이전화면</string>
+    <string name="btn_next">다음화면</string>
+    <string name="text1">Black Pink Jenny</string>
+    <string name="text2">원슈타인</string>
+    <string name="text3">Brave Girls</string>
+    <string name="btn_start">사진보기시작</string>
+    <string name="btn_stop">사진보기정지</string>
+
+
+
+</resources>

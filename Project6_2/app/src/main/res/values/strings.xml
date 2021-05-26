@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">웹브라우저</string>
+    <string name="btn_go">이동</string>
+    <string name="btn_back">이전</string>
+</resources>

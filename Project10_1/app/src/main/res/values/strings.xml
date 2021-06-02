@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Project10_1</string>
+    <string name="btn_new">Open New Activity</string>
+    <string name="btn_back">Back Activity</string>
+    <string name="radio_second">Second Activity</string>
+    <string name="radio_third">Third Activity</string>
+</resources>

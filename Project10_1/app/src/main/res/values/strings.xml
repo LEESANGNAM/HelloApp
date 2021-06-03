@@ -4,4 +4,6 @@
     <string name="btn_back">Back Activity</string>
     <string name="radio_second">Second Activity</string>
     <string name="radio_third">Third Activity</string>
+    <string name="btn_inc">증가하기</string>
+    <string name="btn_dec">감소하기</string>
 </resources>
